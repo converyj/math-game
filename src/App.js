@@ -10,10 +10,10 @@ class App extends Component {
 		numCorrect: 0
 	};
 
-	// handle answer
-	handleAnswer = () => {
-		// update correct answers if correct
-		if (this.props.answerWasCorrect) {
+	// handle answer - updates state
+	handleAnswer = (answerWasCorrect) => {
+		// update numCorrect if correct
+		if (answerWasCorrect) {
 			this.setState((currState) => ({
 				numCorrect: currState.numCorrect + 1
 			}));

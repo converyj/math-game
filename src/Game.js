@@ -57,9 +57,10 @@ class Game extends Component {
 
 	evaluateAnswer = (givenAnswer) => {
 		const { value1, value2, value3, proposedAnswer } = this.state;
+		console.log(this.state);
 		const correctAnswer = value1 + value2 + value3;
 
-		// return boolean of whether the answer is correct
+		// return boolean of whether the answer is correct - if the answers match and the button that was pressed is correct
 		return (
 			(correctAnswer === proposedAnswer && givenAnswer === "true") ||
 			(correctAnswer !== proposedAnswer && givenAnswer === "false")
